@@ -1,0 +1,33 @@
+/* Custom CSS for Flask Form */
+body {
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 500px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .btn-primary {
+    margin-top: 1rem;
+  }
+  
+  @media (min-width: 576px) {
+    .container {
+      max-width: 400px;
+    }
+  }
+  

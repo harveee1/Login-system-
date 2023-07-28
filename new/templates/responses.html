@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Responses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f1f1f1; /* Example: Set body background color to light gray */
+        }
+
+        h1 {
+            text-align: center;
+            color: blue; /* Example: Set heading text color to blue */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333; /* Example: Set table header text color to dark gray */
+        }
+
+        td {
+            color: #666; /* Example: Set table data text color to gray */
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            color: green; /* Example: Set paragraph text color to green */
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Responses</h1>
+    {% if responses %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Password</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for response in responses %}
+                    <tr>
+                        <td>{{ response.emailId }}</td>
+                        <td>{{ response.phoneNumber }}</td>
+                        <td>{{ response.password }}</td>
+                        <td>{{ response.gender }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No responses available.</p>
+    {% endif %}
+</body>
+</html>
